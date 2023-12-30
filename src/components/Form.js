@@ -19,15 +19,16 @@ function Form(props,) {
     <>
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <h1 className="mini_head">Transaction</h1>
-        <input type = "text" {...register('name')}></input><br/>
+        <input type = "text" {...register('name')} placeholder="Enter the Transaction type"></input><br/>
         <select className="form-input" {...register('exp_type')}>
             <option value="Investment" default>Investment</option>
             <option value="Entertainment">Entertainment</option>
             <option value="Food">Food</option>
             <option value="Household Expenses">Household Expenses</option>
         </select><br/>
-        <input type="text" {...register('amount')}></input>
+        <input type="text" {...register('amount')} placeholder="Enter the amount"></input>
         <button type="submit" className=" w-100">Spend</button>
+      
     </form>
     </>
   )
